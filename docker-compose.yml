@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  engine:
+    image: qlikcore/engine:12.556.0
+    command: -S AcceptEULA="yes" -S DocumentDirectory=/docs
+    ports:
+      - "19076:9076"
+    volumes:
+      - ./documents:/docs
